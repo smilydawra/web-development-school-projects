@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="news.xsl" ?>
+
+<news>
+
+  <title>News Article Webpage</title>
+  <news_heading>15 to 25 centimetres of snow expected to fall this weekend</news_heading>
+  <news_link>https://www.cbc.ca/news/canada/ottawa/special-weather-statement-snow-weekend-1.5429906</news_link>
+  <news_summary>Environment Canada has issued a special weather statement 
+  for much of eastern and northeastern Ontario with lots of snow in the 
+  weekend forecast.The snow is expected to start falling Saturday morning 
+  with between 15 to 25 centimetres forecast through to Sunday morning, when 
+  the snow will ease to flurries.</news_summary>
+  <about_us_paragraph>
+    Lorem Ipsum is simply dummy text of the printing and 
+    typesetting industry. Lorem Ipsum has been the industry's 
+    standard dummy text ever since the 1500s, when an unknown 
+    printer took a galley of type and scrambled it to make a type 
+    specimen book. It has survived not only five centuries, but also 
+    the leap into electronic typesetting, remaining essentially unchanged. 
+    It was popularised in the 1960s with the release of Letraset sheets 
+    containing Lorem Ipsum passages, and more recently with desktop publishing 
+    software like Aldus PageMaker including versions of Lorem Ipsum.
+  </about_us_paragraph>
+  
+  <news_articles>
+    <article>
+      <heading>Security camera reveals cat burglar was an actual cat</heading>
+      <link>https://www.upi.com/Odd_News/2020/01/16/Security-camera-reveals-cat-burglar-was-an-actual-cat/9241579193856/?sl=3</link>
+      <summary>A New Zealand family whose home was repeatedly targeted by a 
+      burglar who stole only fish food set up a security camera and identified 
+      the culprit: a neighborhood cat.Mark Spooner of Auckland said a friend was 
+      taking care of the family's fish while they were out of town and the fish-sitter 
+      soon noticed an unusual problem."Our friend was confused because she would leave 
+      the container of fish flakes on the bench at night and in the morning it would be 
+      gone," he told the New Zealand Herald. "She found more fish food in the cupboard 
+      but the same thing happened again -- we had no idea what was going on."Spooner said 
+      the family returned home and soon found themselves awakened in the middle of the 
+      night by a sound in the kitchen.</summary>
+      <published_date>JANUARY 16, 2020</published_date>
+    </article>
+    
+    <article>
+      <heading>Spotify launches playlists for dogs left home alone</heading>
+      <link>https://www.reuters.com/article/us-odd-spotify-dogs/spotify-launches-playlists-for-dogs-left-home-alone-idUSKBN1ZE1D8</link>
+      <summary>Spotify has made playlists and a podcast for dogs to listen to
+       in their owners’ absence, after finding that nearly 74% of UK pet-owners 
+       play music for their animals. The Swedish audio-streaming business company 
+       said it has launched a podcast featuring soothing music, “dog-directed praise”,
+        stories, and messages of affirmation and reassurance narrated by actors to 
+        alleviate stress for dogs who are home alone. Meanwhile, playlists aimed at
+         pets offer tracks selected by algorithms to match pets’ characteristics 
+         such as energetic or slow.</summary>
+      <published_date>JANUARY 15, 2020</published_date>
+    </article>
+    
+    <article>
+      <heading>Colorado bank robber throws cash in air, shouting 'Merry Christmas'</heading>
+      <link>https://www.reuters.com/article/us-colorado-bankrobber/colorado-bank-robber-throws-cash-in-air-shouting-merry-christmas-idUSKBN1YT024</link>
+      <summary>A man with a white beard was being held on $10,000 bond for allegedly 
+      robbing a Colorado bank and throwing the stolen cash into the air while shouting,
+       “Merry Christmas” to passersby, police and local media reported on Tuesday. 
+       David Wayne Oliver, 65, was arrested at a nearby Starbucks coffee shop after 
+       he held up the Academy Bank in Colorado Springs on Monday afternoon, according 
+       to a police report. Police said the suspect had “threatened the use of a 
+       weapon” and left the bank with an undisclosed amount of cash.</summary>
+      <published_date>DECEMBER 24, 2019</published_date>
+    </article>
+    
+    <article>
+      <heading>UK's Johnson: I need to lose weight but becoming vegan would cheese me off</heading>
+      <link>https://www.reuters.com/article/us-britain-politics-johnson-vegan/uks-johnson-i-need-to-lose-weight-but-becoming-vegan-would-cheese-me-off-idUSKBN1ZD0UT</link>
+      <summary>British Prime Minister Boris Johnson said he wants to lose weight in 
+      2020, but will not do “Veganuary” - the popular practice of becoming vegan in 
+      January - as it would take too much concentration and mean giving up cheese. “I
+       had thought of it but it requires so much concentration. I do take my hat 
+       off to vegans who can handle it,” he said during an interview with BBC TV 
+       having confessed he wanted to lose some pounds in the next year.</summary>
+      <published_date>JANUARY 14, 2020</published_date>
+    </article>
+  </news_articles>
+  
+  <footer>copyright &#169; all rights are reserved.</footer>
+
+</news>
