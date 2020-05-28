@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<!--
+//////////////////////////////////////
+//                                  //
+//       HTML Capstone Project      //
+//            Home Page             //
+//                                  //
+//     Submitted To: Brent Scott    //   
+//    Submitted From: Smily dawra   //  
+//                                  // 
+//      Date: December 19, 2019     // 
+//                                  //
+//////////////////////////////////////
+-->
+    
+    <title>Home Page - Smily Dawra</title>
+    <meta charset="utf-8" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" 
+          rel="stylesheet" />
+    <link href="styles/desktop.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="screen and (min-width: 768px)" />
+    <link href="styles/mobile.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="screen and (max-width: 767px)" />
+    <link rel="stylesheet"
+          href="styles/print.css"
+          type="text/css"
+          media="print" />
+    <link rel="icon" href="images/icon.png"  />   
+    <link rel="apple-touch-icon" sizes="128x128" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/Icon_152x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="196x196" href="images/Icon_128x128.png" />
+       
+<!--   "Conditional" comment for Navigation Items in older IE browsers-->
+
+<!--[if LTE IE 9]>
+<script src="ie_8.js"></script>
+<style type="text/css">
+header, nav, section, footer{
+display:block;
+}
+</style>
+<link href="styles/desktop.css" 
+      rel="stylesheet"
+      type="text/css" />
+<![endif]-->
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style> /* Embedded styles for index page */
+
+      .progress{
+        padding: 6px;
+/*        background: rgba(0, 0, 0, 0.25);*/
+        background: #fff;
+        border-radius: 6px;
+/*        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);*/
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .progress-bar{	
+        height: 25px;
+        background-color: #ee303c;  
+        border-radius: 4px;
+        -webkit-transition: 0.4s linear;
+        transition: 0.4s linear;  
+        -webkit-transition-property: width; 
+        transition-property: width; 
+        width: 600px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
+        padding-right: 10px;
+      }
+
+      .progress-striped .progress-bar{ 	
+        background-color: #FCBC51; 
+        width: 80%;
+        background-image: linear-gradient(
+              45deg, rgb(252,163,17) 25%, 
+              transparent 25%, transparent 50%, 
+              rgb(252,163,17) 50%, rgb(252,163,17) 75%,
+              transparent 75%, transparent); 
+        -webkit-animation: progressanimation 3s forwards;
+        animation: progressanimation 3s forwards;
+      }
+      
+      .css{
+        width: 85%;
+      }
+      
+      .html{
+        width: 75%;
+      }
+      
+      .java{
+        width: 50%;
+      }
+      
+      .xml{
+        width: 65%;
+      }
+      
+      .sql{
+        width: 76%;
+      }
+      
+      .php{
+        width: 40%;
+      }
+      
+      @-webkit-keyframes progressanimation{
+          from{
+            width: 0;
+          }
+          to{
+            width: 85%;
+          }
+      }
+      
+      @keyframes progressanimation{
+          from{
+            width: 0;
+          }
+          to{ 
+            width: 85%;
+          }
+      }
+    </style>
+  </head>
+  <body id="home">
+<!--   "Conditional" comment for older IE browsers-->
+<!--[if IE 8]>
+<h1>It's 2019! Stop using IE8! Please install new version of IE for best user experience</h1>
+<![endif]-->
+    <div id="wrapper">
+      <header>
+       <div id="logo">
+         <a href="index.html" title="Logo">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/logo.png" />
+              <source media="(max-width: 767px)" srcset="images/logo2.png" />
+              <img src="images/logo.png" alt="Smily_Dawra_Logo" width="140" height="80" />
+            </picture>
+           </a>
+        </div>
+        <nav>
+          <!-- "Hamburger Menu" -->
+          <a href="#" id="menubutton" title="Mobile menu options">
+            <span id="topbar"></span>
+            <span id="middlebar"></span>
+            <span id="bottombar"></span>
+          </a>
+          <ul id="navlist"> <!-- Navigation starts from here -->
+            <li><a class="nav_home" href="index.html" title="Index Page- Smily Dawra" >Home</a></li>
+            <li><a href="About_me.html" title="About Me Page - Smily Dawra">About Me</a></li>
+            <li><a href="Portfolio.html" title="Portfolio Page - Smily Dawra">Portfolio</a></li>
+            <li><a href="Blog.html" title="Blog Page - Smily Dawra" >Blog</a></li>
+            <li><a href="Contact.html" title="Contact Page - Smily Dawra" >Contact</a></li>
+            <li class="red_color"><a href="#">Get Quote</a></li>
+          </ul>
+
+        </nav>
+        </header> 
+        <main> <!-- Main starts here -->
+         <div id="container">
+            <div class="progress progress-striped css">
+              <div class="progress-bar">
+                CSS3
+              </div> 
+            </div>
+            <div class="progress progress-striped html">
+              <div class="progress-bar">
+                HTML5
+              </div> 
+            </div>  
+            <div class="progress progress-striped java">
+              <div class="progress-bar">
+                JAVA
+              </div> 
+            </div>
+            <div class="progress progress-striped xml">
+              <div class="progress-bar">
+                XML
+              </div> 
+            </div> 
+            <div class="progress progress-striped sql">
+              <div class="progress-bar">
+                SQL
+              </div> 
+            </div>
+            <div class="progress progress-striped php">
+              <div class="progress-bar">
+                PHP
+              </div> 
+            </div>           
+        </div>
+        <div class="polygon smily" style="opacity: 1">
+          <img src="images/smily.jpg" alt="smily image" width="208" height="361" />
+        </div>
+        <div class="introtext">
+          <p>Hello, I'm</p>
+          <p><strong>Smily Dawra</strong></p>
+          <p>I'm a full-stack web developer.</p>
+        </div>
+      </main> <!-- end of main -->
+      
+      <section> <!-- section starts here -->
+        <div>
+          <h2 class="main_heading">Web Designer &amp; Developer</h2>
+          <p>
+            Web design encompasses many different skills and disciplines in the 
+            production and maintenance of websites. The different areas of web 
+            design include web graphic design; interface design; authoring, including 
+            standardised code and proprietary software; user experience design; and 
+            search engine optimization. Often many individuals will work in teams covering 
+            different aspects of the design process, although some designers will cover them 
+            all.
+          </p>
+          <p>
+            A web developer is a programmer who specializes in, or is specifically engaged in, 
+            the development of World Wide Web applications using a client–server model.
+          </p>  
+          <h2 class="main_heading">Web Services</h2>
+          <p>
+            Our experienced staff, combined with our global network, allow us to provide the 
+            support you need - whenever you need it, at home and abroad, whatever the size of 
+            your organization.
+          </p>
+          <ul id="project_ul">
+            <li>
+              <div>
+                <h2 class="frombottom">&#128187;</h2>
+                <h3 class="card_name">Web Designing</h3>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2 class="frombottom">&#128241;</h2>
+                <h3 class="card_name">Web Development</h3>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2 class="frombottom">&#128193;</h2>
+                <h3 class="card_name">Software Testing</h3>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2 class="frombottom">&#128197;</h2>
+                <h3 class="card_name">Support &amp; Maintenance</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section> <!-- section ends here -->
+    </div> <!-- wrapper ends here -->
+      <div id="back"> <!-- footer starts from here -->
+        <footer>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About_me.html">About Me</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="#">Get Quote</a></li>
+          </ul>
+          <div id="end_page">
+            Copyright &copy; 2019
+          </div>
+        </footer>
+      </div> <!-- Footer ends here -->
+  </body>
+</html>

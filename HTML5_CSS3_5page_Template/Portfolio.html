@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<!--
+//////////////////////////////////////
+//                                  //
+//       HTML Capstone Project      //
+//          Portfolio Page          //
+//                                  //
+//     Submitted To: Brent Scott    //   
+//    Submitted From: Smily dawra   //  
+//                                  // 
+//      Date: December 19, 2019     // 
+//                                  //
+//////////////////////////////////////
+-->
+    
+    <title>Portfolio - Smily Dawra</title>
+    <meta charset="utf-8" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" 
+          rel="stylesheet" />
+    <link href="styles/desktop.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="screen and (min-width: 768px)" />
+    <link href="styles/mobile.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="all and (max-width: 767px)" />
+    <link rel="stylesheet"
+          href="styles/print.css"
+          type="text/css"
+          media="print" />
+    <link rel="icon" href="images/icon.png"  />   
+    <link rel="apple-touch-icon" sizes="128x128" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/Icon_1252x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="196x196" href="images/Icon_128x128.png" />      
+<!--   "Conditional" comment for Navigation Items in older IE browsers-->
+
+<!--[if LT IE 9]>
+<script src="ie_8.js"></script>
+<style type="text/css">
+header, nav, section, footer{
+display:block;
+}
+</style>
+<link href="styles/desktop.css" 
+      rel="stylesheet"
+      type="text/css" />
+<![endif]-->
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .containerflex{
+        display: flex;
+      }
+      
+      .containerflex div{
+/*        border: 1px solid #000;*/
+        background-color: #fff;
+        height: 300px;
+        padding: 10px;
+        -webkit-transition: all .35s ease-in-out;
+        transition: all .35s ease-in-out;
+        overflow: hidden;
+        border: 1px solid transparent;
+      }
+      
+      .containerflex div:hover{
+        -webkit-transform: rotate(-7deg);
+        transform: rotate(-7deg);
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+        border: 1px solid #dcc;
+      }
+      
+      #box11{
+        order: 3;
+        flex-grow: 1;
+        background-image: url(images/tech.jpg);
+        margin: 10px 0 0 10px;
+      }
+      
+      #box22{
+        order: 2;
+        flex-grow: 1;
+        background-image: url(images/craft.jpg);
+        margin: 10px 0 0 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      
+      #box33{
+        order: 1;
+        flex-grow: 2;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+        background-image: url(images/coffee_shop.jpg);
+        margin: 10px 0 0 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      
+      #box44{
+        order: 3;
+        flex-grow: 2;
+        background-image: url(images/tulip_website.jpg);
+        margin: 10px 0 0 10px;
+      }
+      
+      #box55{
+        order: 2;
+        flex-grow: 1;
+        background-image: url(images/food.jpg);
+        margin: 10px 0 0 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      
+      #box66{
+        order: 1;
+        flex-grow: 1;
+        background-image: url(images/design.jpg);
+        margin: 10px 0 0 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+     
+    </style>
+  </head>
+  <body id="portfolio">
+<!--   "Conditional" comment for older IE browsers-->
+<!--[if IE 8]>
+<h1>It's 2019! Stop using IE8! Please install new version of IE for best user experience</h1>
+<![endif]-->
+    <div id="wrapper">
+     
+      <header> <!-- Header starts here -->
+        <div id="logo">
+          <a href="index.html" title="Logo">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/logo.png" />
+              <source media="(max-width: 767px)" srcset="images/logo2.png" />
+              <img src="images/logo.png" alt="Logo" width="140" height="80" />
+            </picture>
+          </a>
+        </div>
+        <nav> <!-- Navigation Starts Here -->
+<!-- "Hamburger Menu" -->
+          <a href="#" id="menubutton">
+            <span id="topbar"></span>
+            <span id="middlebar"></span>
+            <span id="bottombar"></span>
+          </a>
+          <ul id="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About_me.html">About Me</a></li>
+            <li><a class="nav_portfolio" href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li class="red_color"><a href="#">Get Quote</a></li>
+          </ul>
+        </nav> 
+      </header> <!-- Header Ends here -->
+      
+      <section>  <!-- Start of the main Section -->
+        <div>
+          <h2 class="main_heading">Portfolio</h2>
+          <p>
+            From Web Components and UI/UX animations to React.JS, 
+            Redux, Vue.JS, and Node.JS. Check out my latest web 
+            software development portfolio projects.
+          </p>
+          <div class="containerflex">
+            <div id="box11"><a href="#"></a></div>
+            <div id="box22"></div>
+            <div id="box33"> </div>
+          </div>
+          <div class="containerflex">
+            <div id="box44"> </div>
+            <div id="box55"></div>
+            <div id="box66"> </div>
+          </div>
+        </div>
+      </section> <!-- end of man section -->
+     </div> <!-- end of wrapper -->
+    <div id="back"> <!-- footer starts here -->
+      <footer>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About_me.html">About Me</a></li>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="#">Get Quote</a></li>
+        </ul>
+        <div id="end_page">
+          Copyright &copy; 2019
+        </div>
+      </footer>
+    </div> <!-- footer ends here -->
+  
+  </body>
+</html>

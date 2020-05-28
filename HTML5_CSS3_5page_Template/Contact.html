@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<!--
+//////////////////////////////////////
+//                                  //
+//      HTML Capstone Project       //
+//           Contact Page           //
+//                                  //
+//     Submitted To: Brent Scott    //   
+//    Submitted From: Smily dawra   //  
+//                                  // 
+//      Date: December 19, 2019     // 
+//                                  //
+//////////////////////////////////////
+-->
+    
+    <title>Contact Us - Smily Dawra</title>
+    <meta charset="utf-8" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" 
+          rel="stylesheet" />
+    <link href="styles/desktop.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="screen and (min-width: 768px)" />
+    <link href="styles/mobile.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="all and (max-width: 767px)" />
+    <link rel="stylesheet"
+          href="styles/print.css"
+          type="text/css"
+          media="print" />
+    <link rel="icon" href="images/icon.png"  />   
+    <link rel="apple-touch-icon" sizes="128x128" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/Icon_1252x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="196x196" href="images/Icon_128x128.png" />          
+<!--   "Conditional" comment for Navigation Items in older IE browsers-->
+
+<!--[if LT IE 9]>
+<script src="ie_8.js"></script>
+<style type="text/css">
+header, nav, section, footer{
+display:block;
+}
+</style>
+<link href="styles/desktop.css" 
+      rel="stylesheet"
+      type="text/css" />
+<![endif]-->
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      header{
+        height: 400px;
+        overflow: hidden;
+      }
+      
+      
+      table{
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 90%;
+        margin-bottom: 20px;
+        border-spacing: 5px;
+      }
+
+      table,td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      address{
+        margin-left: 13px;
+      }
+      
+
+      
+      fieldset{
+        border: none;
+      }
+
+      
+      #first_form label{
+        width: 120px;
+        display: block;
+        float: left;
+        clear: both;
+        text-align: left;
+        margin-left: 1px;
+      }
+      
+      textarea#comments {
+        width: 200px;
+      }
+      
+      #first_form input[type="text"],
+      #first_form input[type="password"],
+      #first_form input[type="email"],
+      #first_form input[type="number"],
+      #first_form input[type="date"],
+      #first_form input[list="country"],
+      #first_form input[type="tel"]{
+        border: 1px solid #004;
+        width: 200px;
+        height: 20px;
+        background-color: #efe;
+        font-family: Tahoma, Arial, sans-serif;
+        font-size: 0.8em;
+        font-weight: bold;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      #first_form input:not([type="radio"]):not([type="checkbox"]):hover{
+        background-color: #ccc;
+        box-shadow: 0 0 5px #cfc;
+      }
+      
+      #first_form input:focus{
+        background-color: #ccc;
+      }
+      
+      #first_form input + label{
+        float: none;
+        display: inline;
+        width: auto;
+      }
+      
+      #first_form input{
+        width: auto;
+      }
+      
+      #first_form input[type="submit"],
+      #first_form input[type="reset"],
+      #first_form input[type="button"]{
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+        padding: 6px;
+        background-color: #ccc;
+        font-weight: bold;
+      }
+      
+      #first_form input[type="submit"]:hover,
+      #first_form input[type="reset"]:hover,
+      #first_form input[type="button"]:hover{
+        background-color: #ccc;
+      }
+      
+      
+    </style>
+  </head>
+  <body id="contact">
+<!--   "Conditional" comment for older IE browsers-->
+<!--[if IE 8]>
+<h1>It's 2019! Stop using IE8! Please install new version of IE for best user experience</h1>
+<![endif]-->
+
+    <div id="wrapper">
+      <header> <!-- Header starts here -->
+        <div id="logo">
+          <a href="index.html" title="Logo">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/logo.png" />
+              <source media="(max-width: 767px)" srcset="images/logo2.png" />
+              <img src="images/logo.png" alt="Logo" width="140" height="80" />
+            </picture>
+          </a>
+        </div>
+        <nav> <!-- Navigation Starts Here -->
+<!-- "Hamburger Menu" -->
+          <a href="#" id="menubutton">
+            <span id="topbar"></span>
+            <span id="middlebar"></span>
+            <span id="bottombar"></span>
+          </a>
+          <ul id="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About_me.html">About Me</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a class="nav_contact" href="Contact.html">Contact</a></li>
+            <li class="red_color"><a href="#">Get Quote</a></li>
+          </ul>
+        </nav> 
+        <div id="Canada">
+          <img src="images/canada_contact.jpg" alt="canada_photo" width="936" height="440" />
+        </div>
+
+      </header> <!-- Header Ends here -->
+      
+      <section>  <!-- Start of the main Section -->
+        <div>
+          <h2 class="main_heading">Contact</h2>
+          <table>
+            <tr>
+              <th>Corporate Office</th>
+              <th>City Branch</th>
+            </tr>
+            <tr>
+              <td>
+                <address>
+                  320 Colony Street, <br/>
+                  Winnipeg (R3C 0E8) <br/>
+                  MB, Canada
+                </address>
+              </td>
+              <td>                
+                <address>
+                  1485 Portage Ave #66Q, <br/>
+                  Winnipeg, MB R3G 0W4 <br/>
+                  MB, Canada
+                </address></td>
+            </tr>
+          </table>
+
+          <div id="map_photo">
+            <img src="images/map_picture.JPG" alt="map_picture" width="450" height="300" />
+          </div>
+          <form id="first_form"
+          name="first_form"
+          method="post"
+          autocomplete="on"
+          action="http://www.scott-media.com/test/form_display.php"> <!-- action tells the form where to send the data.-->
+            <fieldset>   
+              <p>
+                <label for="first_name">First Name:*</label>   
+                <input type="text" 
+                       id="first_name"
+                       name="first_name"
+                       size="25"
+                       maxlength="40"
+                       required
+                       placeholder="Type name here"
+                />
+              </p>
+
+              <p>
+                <label for="last_name">Last Name:*</label>
+                <input type="text"
+                       id="last_name"
+                       name="last_name"
+                />
+              </p>
+
+              <p>
+                <label for="email_address">Email:*</label>
+                <input type="email"
+                       name="email_address"
+                       id="email_address"
+                />
+              </p>
+
+              <p>
+                <label for="phone">Phone:*</label>
+                <input type="tel" name="phone" id="phone" />
+              </p>
+
+              <p>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" />
+              </p>
+
+              <p>
+                <label for="comments">Type your comments</label> <br />
+                <textarea name="comments"
+                  id="comments"
+                  cols="50"
+                  rows="5"
+                  placeholder="Type comments here"></textarea>
+              </p>
+              
+              <p>
+                <input type="submit" value="Send Form Please" />&nbsp;
+                <input type="reset" value="Clear Form" accesskey="c" />&nbsp;
+              </p>
+
+            </fieldset>
+          </form>
+
+        </div>
+      </section>
+     </div>
+    <div id="back">
+      <footer>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About_me.html">About Me</a></li>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="#">Get Quote</a></li>
+        </ul>
+        <div id="end_page">
+          Copyright &copy; 2019
+        </div>
+      </footer>
+    </div>
+ 
+  </body>
+</html>

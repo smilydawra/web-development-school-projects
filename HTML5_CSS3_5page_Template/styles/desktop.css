@@ -1,0 +1,541 @@
+/* Smily's Portfolo Website CSS Styles for devices 769 and wider */
+
+/*
+//////////////////////////////////////
+//                                  //
+//         Desktop.css File         //
+//                                  //
+//                                  //
+//     Submitted To: Brent Scott    //   
+//    Submitted From: Smily dawra   //  
+//                                  // 
+//      Date: December 19, 2019     // 
+//                                  //
+//////////////////////////////////////
+*/
+
+body{
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+h2{
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 700;
+}
+
+
+/*Layout for wrapper*/
+
+#wrapper{
+  width: 960px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow-x: hidden;
+} 
+
+/*Layout for header*/
+header{
+  height: 100px;
+  padding: 2px;
+  overflow: hidden;
+  position: relative;
+/*        background-image: linear-gradient(#fff, #ccc);*/
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+}
+
+
+.smily{
+  margin-top:80px;
+  margin-left: 720px;
+  z-index: 200;
+  position: absolute;
+  top: -25%;
+  right: 2%;
+}
+
+main{
+  position: relative;
+  display: block;
+}
+
+.introtext{
+  background-color: #444;
+  color: #fff;
+  line-height: 0.5em;
+  padding: 2px;
+  width: 250px;
+  border-radius: 8px;
+  text-align: center;
+  position: absolute;
+  top: 65%;
+  z-index: 2000;
+  right:2%;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.introtext strong{
+  color:#FCBC51;
+}
+
+#logo{
+  top: 11px;
+  left: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+div#container{
+  text-align: right;
+  margin-top: 20px;
+}
+
+
+/*Layout for navigation menu*/
+
+nav{
+  height: 20px;
+  text-align: center;
+  margin-left: 213px;
+  margin-top: 24px;
+}
+
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 6px rgba(0,0,0,0.4);
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.4);
+}
+
+
+ul#navlist{
+  background-color: #ccc;
+  
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav ul li a{
+  font-size: 1.2em;
+  padding: 13px 20px 13px 20px;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+
+
+nav ul li a:before {
+/*  background-color: #fff;*/
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+  opacity: 0;
+  top: 1.2em;
+  bottom: 1.2em;
+  left: 0;
+  right: 0;
+  border-top: 3px solid #248;
+  border-bottom: 3px solid #248;
+}
+
+
+nav ul li a:hover:before{
+  opacity: 1;
+  top: 0;
+  bottom: 0;  
+}
+
+/*
+nav ul li.a :active{
+  text-decoration: underline;
+}
+*/
+
+nav ul li.red_color a{
+  border-radius: 10px;
+  background-color: #FCBC51;
+}
+
+/*Navigation layout ends here*/
+
+/*Code for you are here indicator*/
+
+body#home nav ul#navlist li a.nav_home, 
+body#about nav ul#navlist li a.nav_about, 
+body#portfolio nav ul#navlist li a.nav_portfolio, 
+body#contact nav ul#navlist li a.nav_contact, 
+body#blog nav ul#navlist li a.nav_blog{
+    text-decoration: overline;
+}
+
+
+/*layout for main section*/
+
+section{
+  min-height: 650px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+section h2.main_heading{
+  
+  border-bottom: 1px solid #FB8C00;
+  padding: 4px;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+/*Polygon for index and about me page*/
+
+.polygon{
+  background: #FB8C00;
+  color: #000;
+  height: 200px;
+  width: 200px;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  text-align: Center;
+  text-transform: uppercase;
+  line-height: 200px;
+  text-shadow: 1px 1px #000;
+  opacity: 0.8;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+/*Positions for polygons on aboutme page*/
+
+div.line{
+  width: 0px; 
+  height: 820px; 
+  border: 1px solid #666;
+  margin: 0 auto;
+}
+
+.position1{
+  position: absolute;
+  top: 17%;
+  right: 16%; 
+  background-image: url(images/Info.jpg);
+}
+
+.position2{
+  position: absolute;
+  top: 33%;
+  left: 16%;
+  background-image: url(images/Experience.jpg);
+}
+
+.position3{
+  position: absolute;
+  top: 56%;
+  right: 16%;
+  background-image: url(images/Education.JPG);
+}
+
+.position4{
+  position: absolute;
+  top: 73%;
+  left: 16%;
+  background-image: url(images/Skills.jpg);
+} /* end of about me page layout*/
+
+/*Layout for contact page*/
+#Canada{
+  text-align: right;
+  margin-top: 50px;
+}
+
+#Canada img{
+  max-width: 100%;
+  height: auto;
+}
+
+/*Layout fot blog page*/
+
+#blogbox div{
+/*        border: 1px solid #000;*/
+
+  height: 300px;
+  width: 400px;
+  margin: 30px auto;
+  overflow: hidden;
+  -webkit-transition:  1.3s;
+  transition:  1.3s;
+  text-align: right;
+
+}
+
+#blogbox div:hover{
+  width: 820px;
+}
+
+/*Layout for Circles on index page*/
+
+#project_ul{
+padding: 0 0 0 100px;
+margin: 20px auto;
+width: 800px;
+}
+
+#project_ul li{
+width: 200px;
+height: 200px;
+border: 13px solid #eee;
+overflow: hidden;
+-webkit-border-radius: 150px;
+border-radius: 150px;
+margin-top: 20px;
+margin-left: -38px;
+text-align:center;
+background-color: #fff;
+padding: 5px;
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+display: inline-block;
+text-decoration: none;
+position: relative;
+float: left;
+-webkit-transition: all 0.5s ease-in-out; 
+transition: all 0.5s ease-in-out; 
+}
+
+#project_ul li:hover{
+border-color: #FB8C00;
+z-index: 1000;
+-webkit-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-o-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+overflow: hidden;
+}
+
+.frombottom{
+font-size: 50px;
+color: #eee;
+line-height: 60px;
+position: absolute;
+width: 100px;
+height: 60px;
+left: 50px;
+top: -25px;
+text-align: center;
+-webkit-transition: all 0.35s ease-out;
+transition: all 0.35s ease-out;
+}
+
+.card_name{
+font-size: 24px;
+position: absolute;
+top: 90px;
+height: 80px;
+width: 170px;
+left: 55px;
+margin-left: -35px;
+opacity: 0.8;
+text-align: center;
+color: #555;
+}
+
+
+
+#project_ul li:hover .frombottom{
+color: #248;
+font-size: 80px;
+text-shadow: 0px 0px 1px #000;
+-webkit-animation: moveFromBottom 0.35s ease-in-out;
+-moz-animation: moveFromBottom 0.35s ease-in-out;
+animation: moveFromBottom 0.35s ease-in-out;
+}
+
+
+#project_ul li:hover .card_name{
+color: #FB8C00;
+-webkit-animation: moveFromBottom 0.35s ease-in-out;
+-moz-animation: moveFromBottom 0.35s ease-in-out;
+animation: moveFromBottom 0.35s ease-in-out;
+}
+
+
+@-webkit-keyframes moveFromBottom {
+from {
+  -webkit-transform: translateY(200%) scale(0.5);
+  -moz-transform: translateY(200%) scale(0.5);
+  -o-transform: translateY(200%) scale(0.5);
+  transform: translateY(200%) scale(0.5);
+  opacity: 0;
+}
+to {
+  -webkit-transform: translateY(0%) scale(1);
+  -moz-transform: translateY(0%) scale(1);  
+  -o-transform: translateY(0%) scale(1);  
+  transform: translateY(0%) scale(1);  
+  opacity: 1;        
+}
+}
+@-moz-keyframes moveFromBottom {
+from {
+  -moz-transform: translateY(200%) scale(0.5);
+  -webkit-transform: translateY(200%) scale(0.5);
+  -o-transform: translateY(200%) scale(0.5);
+  transform: translateY(200%) scale(0.5);
+  opacity: 0;
+}
+to {
+  -moz-transform: translateY(0%) scale(1);
+  -webkit-transform: translateY(0%) scale(1);
+  -o-transform: translateY(0%) scale(1);
+  transform: translateY(0%) scale(1);
+  opacity: 1;        
+}
+}
+@-ms-keyframes moveFromBottom {
+from {
+  -moz-transform: translateY(200%) scale(0.5);
+  -webkit-transform: translateY(200%) scale(0.5);
+  -o-transform: translateY(200%) scale(0.5);
+  transform: translateY(200%) scale(0.5);
+  opacity: 0;
+}
+to {
+  -moz-transform: translateY(0%) scale(1);
+  -webkit-transform: translateY(0%) scale(1);
+  -o-transform: translateY(0%) scale(1);
+  transform: translateY(0%) scale(1);
+  opacity: 1;        
+}
+}
+
+/*Layout for circles(index page) ends here*/
+
+/*layout for footer*/
+#back{
+  background-color: #bbb;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+footer{
+  overflow: hidden;
+  text-align: center;
+  background-size: cover;
+}
+
+div#end_page{
+  margin-bottom: 10px;
+}
+
+footer ul{
+  margin: 0;
+  padding: 0;
+  background-color: #bbb;
+}
+
+footer ul li{
+  list-style-type: none;
+  display: inline-block;
+}
+
+footer ul li a{
+  font-size: 1em;
+  padding: 14px 40px 13px 40px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+footer ul li a:hover{
+  color: #fff;
+}
+
+
+
+/*      Media Queries for Desktop*/
+@media screen and (min-width: 767px) and (max-width: 959px) {
+  #wrapper{
+    width: 100%;
+/*				background-color: #fcc;*/
+}
+
+  nav ul li a{
+    padding: 8px 14px 8px 14px;
+}
+}
+
+
+@media screen and (min-width:766px) and (max-width: 890px){
+  nav ul li a{
+  padding: 5px 12px 5px 12px;
+}
+  
+  nav ul li a{
+    font-size: 0.9em;
+  }
+  
+  .smily{
+    margin-right: -20px;
+    margin-top: 9.5%;
+  }
+  
+  .introtext{
+    margin-right: -20px;
+  }
+  
+  #project_ul{
+    margin: 20px auto;
+    width: 300px;
+  }
+
+}
+
+
+/*      Media Queries for Mobile*/
+
+@media screen and (max-width: 767px) and (min-width: 320px){
+  #wrapper{
+    width: 100%;
+    background-color: #cfc;
+  }
+
+  #logo img{
+    width: 140px;
+    height: 140px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+  }
+
+  nav ul li a{
+  font-size: 1em;
+  }
+
+  nav ul li a{
+    padding: 5px 10px 5px 10px;
+  }
+  
+
+
+}

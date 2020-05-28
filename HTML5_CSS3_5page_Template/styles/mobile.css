@@ -1,0 +1,315 @@
+/* Smily's Portfolo Website Mobile CSS Styles for devices 767 and below */
+
+/*
+//////////////////////////////////////
+//                                  //
+//         mobile.css File         //
+//                                  //
+//                                  //
+//     Submitted To: Brent Scott    //   
+//    Submitted From: Smily dawra   //  
+//                                  // 
+//      Date: December 19, 2019     // 
+//                                  //
+//////////////////////////////////////
+*/
+
+body{
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+h2{
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 700;
+}
+
+#wrapper{
+	width: 100%;
+  background-color: #fff;	
+	position: relative;
+}
+
+header{
+  height: 50px;
+  position: relative;
+  background-color: #fff;
+}
+
+#logo img{
+  width: 90px;
+  height: 60px;
+  top: 11px;
+  left: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+/*layout for navigation*/
+
+nav a#menubutton{
+	display: block;
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: 30px;
+	right: 7px;
+}
+
+nav a#menubutton span{
+	display: block;
+	height: 3px;
+	background-color: #222;
+	margin: 5px 7px 3px 7px;
+}
+
+/* Styles for navigation */
+nav ul#navlist{
+	margin: 0;
+	padding: 0px ;
+	width: 175px;
+	background-color: #555; 
+	font-size: 0.8em;
+	position: absolute;
+	top: 60px;
+	right: 15px;
+	box-shadow: 0 7px 10px rgba(0,0,0,0.6);
+	display: none;
+}
+
+nav:hover ul#navlist{
+	display: block;
+  z-index: 10;
+}
+
+nav ul li{
+  list-style-type: none;
+	background-color: #ccc;
+	margin-bottom: 2px;
+}
+
+nav ul li:hover{
+  background-color: #eee;
+}
+
+nav ul li a{
+	padding: 10px 15px 10px 15px;
+	display: block;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+#project_ul{
+  margin: 0 auto;
+}
+
+#project_ul li{
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border: 7px solid #eee;
+  border-radius: 100px;
+  margin-top: 20px;
+  background-color: #fff;
+  text-align:center;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  border-color: #545454;
+  cursor: pointer;
+}
+
+/*layout for section*/
+
+section{
+  min-height: 450px;
+}
+
+section p{
+  padding: 0 10px 0 10px;
+}
+
+section h2.main_heading{  
+  border-bottom: 1px solid #248;
+  padding: 4px;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/*mobile layout for index page*/
+#boxes{
+  margin-top: 0px;
+}
+
+div#container{
+  text-align: right;
+  margin-top: 50px;
+}
+
+.smily{
+  margin: 0 auto;
+  display: none;
+}
+
+main{
+  position:  relative;
+  display: block;
+}
+
+.introtext{
+  margin: 0 auto;
+  background-color: #444;
+  color: #fff;
+  line-height: 0.5em;
+  
+  padding: 2px;
+  width: 250px;
+  border-radius: 8px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.introtext strong{
+  color:#FCBC51;
+}
+
+/*Mobile Layout for portfolio page content*/
+
+.containerflex{
+  flex-direction: column;
+}
+
+/*mobile layout for blog page content*/
+
+#blogbox div{
+  height: 300px;
+  width: 300px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+#blogbox div:hover{
+  cursor: pointer;
+  height: 600px;
+}
+
+#blog1 img,
+#blog2 img{
+  display: block;
+  clear: both;
+}
+
+/*mobile layout for contact page*/
+
+#Canada{
+  margin-top: 100px;
+}
+
+#Canada img{
+  max-width: 100%;
+  height: auto;
+}
+
+table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+#map_photo img{
+  margin-left: 25px;
+  width: 300px;
+  height: 300px;
+  }
+
+/*moble layout for about me page*/
+
+div.line,.line5,
+.line4,.line3,.line2{
+  opacity: 0;
+}
+
+div.line{
+  height: 0px;
+}
+
+.polygon{
+  background: #FB8C00;
+  color: #000;
+  height: 200px;
+  width: 200px;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  text-align: Center;
+  text-transform: uppercase;
+  line-height: 200px;
+  text-shadow: 1px 1px #000;
+  opacity: 1;
+  cursor: pointer;
+  display: block;
+}
+
+.position1,.position2,.position3,.position4{
+  display: block;
+  margin:0 auto;
+  margin-top: 30px;
+}
+
+.position1{
+  background-image: url(images/Info.jpg);
+}
+
+.position2{
+  background-image: url(images/Experience.jpg);
+}
+
+.position3{
+  background-image: url(images/Education.JPG);
+}
+
+.position4{
+  background-image: url(images/Skills.jpg);
+}
+
+/*Mobile layout for footer*/
+
+#back{
+  height: 100px;
+  background-color: #bbb;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#footer{
+	background-color: #bbb;
+	color: #000;
+}
+
+footer ul{
+  margin: 0;
+  padding: 0;
+  background-color: #bbb;
+}
+
+footer ul li{
+  list-style-type: none;
+  display: inline-block;
+}
+
+footer ul li a{
+  font-size: 1em;
+  padding: 14px 40px 13px 40px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+footer div{
+  margin-top: -1px;
+  background-color: #bbb;
+}

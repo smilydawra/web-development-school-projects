@@ -1,0 +1,94 @@
+/* Smily's Portfolio Website Print CSS Styles  */
+body{
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+h2{
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 700;
+}
+
+#wrapper{
+  width: 960px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow-x: hidden;
+} 
+
+ div#logo picture img{
+  top: 11px;
+  left: 0px;
+  position: fixed;
+  z-index: 1;
+}
+
+header{
+  height: 100px;
+  padding: 2px;
+  overflow: hidden;
+  position: relative;
+/*        background-image: linear-gradient(#fff, #ccc);*/
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+}
+
+
+div#container{
+display: none;
+}
+
+main{
+  position: relative;
+  display: block;
+}
+
+.smily{
+  margin-top:0px;
+  margin-left: 520px;
+  z-index: 200;
+}
+
+.introtext{
+  color: #000;
+  line-height: 0.5em;
+  padding: 2px;
+  width: 250px;
+  border-radius: 8px;
+  text-align: center;
+  position: absolute;
+  top: 65%;
+  z-index: 2000;
+  right:45%;
+  margin-left: 0;
+}
+
+.introtext strong{
+  color:#FCBC51;
+}
+
+
+section{
+  display: block;
+}
+
+
+nav{
+  display: none;
+}
+
+footer{
+  display: none;
+}
+
+footer ul li a{
+  display: none;
+}

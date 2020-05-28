@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<!--
+//////////////////////////////////////
+//                                  //
+//       HTML Capstone Project      //
+//           About Me Page          //
+//                                  //
+//     Submitted To: Brent Scott    //   
+//    Submitted From: Smily dawra   //  
+//                                  // 
+//      Date: December 19, 2019     // 
+//                                  //
+//////////////////////////////////////
+-->
+    
+    <title>About Me - Smly Dawra</title>
+    <meta charset="utf-8" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" 
+          rel="stylesheet" />
+    <link href="styles/desktop.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="screen and (min-width: 768px)" />
+    <link href="styles/mobile.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="all and (max-width: 767px)" />
+    <link rel="stylesheet"
+          href="styles/print.css"
+          type="text/css"
+          media="print" />
+    <link rel="icon" href="images/icon.png"  />   
+    <link rel="apple-touch-icon" sizes="128x128" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/Icon_1252x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="196x196" href="images/Icon_128x128.png" />          
+<!--   "Conditional" comment for Navigation Items in older IE browsers-->
+
+<!--[if LT IE 9]>
+<script src="ie_8.js"></script>
+<style type="text/css">
+header, nav, section, footer{
+display:block;
+}
+</style>
+<link href="styles/desktop.css" 
+      rel="stylesheet"
+      type="text/css" />
+<![endif]-->
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+
+      .polygon:hover{
+        opacity: 1;
+        text-decoration: underline;
+        color: #000;
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      
+      strong{
+        background-color: #fff;
+        padding: 5px;
+        opacity: 1
+      }
+      
+      strong a{
+        text-decoration: none;
+        color:#000;
+      }
+      
+      .line_horizontal{
+        width: 118px; 
+        height: 0px; 
+        border: 1px solid #666;
+        margin: 0 auto;
+      }
+      
+      .line2{
+        position: absolute;
+        top: 250px;
+        left: 50%; 
+      }
+      
+      .line3{
+        position: absolute;
+        top:450px;
+        right: 50%;
+      }
+      
+      .line4{
+        position: absolute;
+        top:650px;
+        left: 50%;
+      }
+      
+      .line5{
+        position: absolute;
+        top:850px;
+        right: 50%;
+      }
+      
+
+      
+    </style>
+  </head>
+  <body id="about">
+<!--   "Conditional" comment for older IE browsers-->
+<!--[if IE 8]>
+<h1>It's 2019! Stop using IE8! Please install new version of IE for best user experience</h1>
+<![endif]-->
+
+    <div id="wrapper">
+      <header> <!-- Header starts here -->
+        <div id="logo">
+          <a href="index.html" title="Logo">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/logo.png" />
+              <source media="(max-width: 767px)" srcset="images/logo2.png" />
+              <img src="images/logo.png" alt="Logo" width="140" height="80" />
+            </picture>
+          </a>
+        </div>
+        <nav> <!-- Navigation Starts Here -->
+<!-- "Hamburger Menu" -->
+          <a href="#" id="menubutton">
+            <span id="topbar"></span>
+            <span id="middlebar"></span>
+            <span id="bottombar"></span>
+          </a>
+          <ul id="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="nav_about" href="About_me.html">About Me</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li class="red_color"><a href="#">Get Quote</a></li>
+          </ul>
+        </nav> 
+
+
+      </header> <!-- Header Ends here -->
+      
+      <section>  <!-- Start of the main Section -->
+
+        <div>
+          <h2 class="main_heading">About Me</h2>
+          <div>
+            <p>
+              I am Smily Dawra, web
+              developer from Winnipeg, Canada. I have a bachelor’s in computer
+              science degree with an industry experience of 5 years in software 
+              and web development. Currently I am pursuing a post graduate diploma 
+              in Web Development to further hone my skills. I am energetic about 
+              building magnificent websites that improves the lives of people around me. 
+              I have expertise in making websites for customers ranging from individuals 
+              and small businesses all the way to large enterprise corporations.
+            </p>
+          </div>
+          <div class="line"></div>
+          <div class="line_horizontal line2"></div>
+          <div class="line_horizontal line3"></div>
+          <div class="line_horizontal line4"></div>
+          <div class="line_horizontal line5"></div>
+          <div class="polygon position1">
+            <strong><a href="#">Professional Info</a></strong>
+          </div>
+          <div class="polygon position2">
+            <strong><a href="#">Work Experience</a></strong>
+          </div>
+          <div class="polygon position3">
+            <strong><a href="#">Education</a></strong>
+          </div>
+          <div class="polygon position4">
+            <strong><a href="#">Skills</a></strong>
+          </div>
+        </div>
+      </section> <!-- end of main section -->
+     </div><!-- end of wrapper -->
+    <div id="back"> <!-- footer starts here -->
+      <footer>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About_me.html">About Me</a></li>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="#">Get Quote</a></li>
+        </ul>
+        <div id="end_page">
+          Copyright &copy; 2019
+        </div>
+      </footer>
+    </div> <!-- end of footer -->
+
+  </body>
+</html>

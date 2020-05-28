@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<!--
+//////////////////////////////////////
+//                                  //
+//       HTML Capstone Project      //
+//            Blog Page             //
+//                                  //
+//     Submitted To: Brent Scott    //   
+//    Submitted From: Smily dawra   //  
+//                                  // 
+//      Date: December 19, 2019     // 
+//                                  //
+//////////////////////////////////////
+-->
+    
+    <title>Blog by Smily Dawra</title>
+    <meta charset="utf-8" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" 
+          rel="stylesheet" />
+    <link href="styles/desktop.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="screen and (min-width: 768px)" />
+    <link href="styles/mobile.css" 
+          rel="stylesheet"
+          type="text/css"
+          media="all and (max-width: 767px)" />
+    <link rel="stylesheet"
+          href="styles/print.css"
+          type="text/css"
+          media="print" />
+    <link rel="icon" href="images/icon.png"  />   
+    <link rel="apple-touch-icon" sizes="128x128" href="images/Icon_128x128.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/Icon_152x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="images/Icon_167x167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icon_180x180.png" />
+    <link rel="apple-touch-icon" sizes="196x196" href="images/Icon_196x196.png" />          
+<!--   "Conditional" comment for Navigation Items in older IE browsers-->
+
+<!--[if LT IE 9]>
+<script src="ie_8.js"></script>
+<style type="text/css">
+header, nav, section, footer{
+display:block;
+}
+</style>
+<link href="styles/desktop.css" 
+      rel="stylesheet"
+      type="text/css" />
+<![endif]-->
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+
+      
+      #blog1 img,
+      #blog2 img{
+        float: left;
+      }
+      
+      div#blog1 p,
+      div#blog2 p{
+        opacity: 0;
+        padding: 10px;
+      }
+      
+      strong{
+        opacity: 0;
+      }
+      
+      div#blog1:hover p,
+      div#blog2:hover p,
+      strong{
+        opacity: 1;
+        text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      }
+      
+      div#blog1:hover,
+      div#blog2:hover{
+        border-right: 1px solid #ccc;
+/*        border-bottom: 1px solid #ccc;*/
+      }
+      
+      strong{
+        text-align: center;
+        font-size: 1.6em;
+        background-color: #FCBC51;
+      }
+      
+    </style>
+  </head>
+  <body id="blog">
+<!--   "Conditional" comment for older IE browsers-->
+<!--[if IE 8]>
+<h1>It's 2019! Stop using IE8! Please install new version of IE for best user experience</h1>
+<![endif]-->
+
+    <div id="wrapper">
+      <header> <!-- Header starts here -->
+        <div id="logo">
+          <a href="index.html" title="Logo">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/logo.png" />
+              <source media="(max-width: 767px)" srcset="images/logo2.png" />
+              <img src="images/logo.png" alt="Logo" width="140" height="80" />
+            </picture>
+          </a>
+        </div>
+        <nav> <!-- Navigation Starts Here -->
+<!-- "Hamburger Menu" -->
+          <a href="#" id="menubutton">
+            <span id="topbar"></span>
+            <span id="middlebar"></span>
+            <span id="bottombar"></span>
+          </a>
+          <ul id="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About_me.html">About Me</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a class="nav_blog" href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li class="red_color"><a href="#">Get Quote</a></li>
+          </ul>
+        </nav> 
+
+
+      </header> <!-- Header Ends here -->
+      
+      <section>  <!-- Start of the main Section -->
+        <div>
+          <h2 class="main_heading">Traveler</h2>
+          <p>
+            Hello, I'm Smily, a web developer by profession and traveler 
+            by heart; fixated on exploring the world, meeting new individuals 
+            (+ dogs) and getting as lost as conceivable with my camera. I was 
+            on the road for 205 days between 2016 and 2019 taking a chance of 
+            visiting less explored and very popular tourist destinations.
+          </p>
+          <p>
+            I hope this website gives you some kind of inspiration (and handy tips) 
+            to go and chase your own adventures. Travel is the best kind of education 
+            so go get lost, even if it’s just outside your own doorstep!     
+
+          </p>
+          <div id="blogbox">
+            <div id="blog1">
+              <img src="images/Blog1.JPG" alt="New York Time Square" width="400" height="300"/> <br/><br/>
+              <strong>New York</strong>
+              <p>The Empire City, Big Apple, Concrete Jungle and city of dreams, 
+                 this city has plenty of nicknames and whatever nickname or 
+                 reference you may have come across, New York city is a popular 
+                 bucket list destination for almost everyone! There’s something 
+                 about Times Square lights, street food and Statue of Liberty that 
+                 keeps people coming back over and over again.
+              </p>
+            </div>
+            <div id="blog2">
+              <img src="images/Blog2.jpg" alt="Grand Canyon - Naveda" width="400" height="300"/> <br/><br/>
+              <strong>Grand Canyon</strong>
+               <p>Grand Canyon is one of the most visited places in United States. Anyone who 
+                has visited it can vouch for the breathtaking views and landscape. However, 
+                if you are planning to visit, avoid going to the West Rim, as it’s a tourist 
+                trap and a rip off. The West rim is run by an Indian Reservation which 
+                charges $30 to come in the reservation and then another $35 to go the skywalk 
+                (glass platform overhanging the canyon).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+     </div>
+    <div id="back">
+      <footer>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About_me.html">About Me</a></li>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="#">Get Quote</a></li>
+        </ul>
+        <div id="end_page" style="background-color: #bbb">
+          Copyright &copy; 2019
+        </div>
+      </footer>
+    </div>
+
+  
+  </body>
+</html>
