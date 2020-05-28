@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<!--
+			//////////////////////////
+			//   Assignment 1       //
+			// Advanced JavaScript  //
+			//                      //
+			//         by           //
+			//     Smily Dawra      //
+			//////////////////////////
+	   -->
+    <title>Assignment 1 - Advanced JS</title>
+    <meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"
+					 rel="stylesheet">
+		<style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+				color: #000;
+				background: linear-gradient(#000,#7bc);
+      }
+			h1 {
+			text-align: center;
+			}
+
+			.fotorama{
+				padding-left: 100px;
+
+			}
+
+			#footer{
+				margin-top: 50px;
+				text-align: center;
+				font-weight: 400;
+				font-size: 0.8em;
+			}
+
+
+    </style>
+
+  </head>
+  <body>
+			<!-- Using Fotorama Plugin -->
+			
+			<!-- //customization to enhance user experience -->
+		<div class="fotorama"
+				 data-allowfullscreen="true"
+				 data-transition="crossfade"
+				 data-clicktransition="slide"
+		     data-minwidth="400"
+		     data-maxwidth="1000"
+		     data-minheight="300"
+		     data-maxheight="100%"
+				 data-nav="thumbs"
+				 data-fit="cover">
+				 <!-- //Images -->
+  		<img alt="Maldives1" src="images/image1.jpg" data-caption="Vacation in Maldives!">
+  		<img alt="Maldives2" src="images/image2.jpg" data-caption="The Water Villa!">
+			<img alt="Maldives3" src="images/image3.jpg" data-caption="Swim With Mantas!">
+			<img alt="Maldives4" src="images/image4.jpg" data-caption="Luxury Resorts in Maldives!">
+			<img alt="Maldives5" src="images/image5.jpg" data-caption="Beautiful Maldives at Night!">
+			<img alt="Maldives6" src="images/image6.jpg" data-caption="Romantic Vibes in Maldives!">
+			<img alt="Maldives7" src="images/image7.jpg" data-caption="One Romantic Evening like this!">
+		</div>
+		<div id="footer">Smily Dawra | copyright 2020</div>
+
+		<!-- jQuesry CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Plugin CDN -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+		<script>
+			//JavaScript goes here
+			$(document).ready(function(){
+				$('.fotorama').fotorama({
+					autoplay: true,
+					width: "100%",
+ 		      ratio: "4/3"
+				});
+			});
+
+
+		</script>
+  </body>
+</html>
