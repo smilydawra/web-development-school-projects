@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Ping Pong Game</title>
+    <meta charset="utf-8" />
+    <style>
+      body{
+        font-family: Tahoma, Arial, sans-serif;
+        font-size: 16px;
+      }
+      .shadow{
+        box-shadow: 0 7px 11px rgba(0,0,0,0.7);
+      }
+      .rounded{
+        border-radius: 10px;
+      }
+      .textshadow{
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+      }
+      
+      #results{
+        background-color: #eef;
+        border: 1px solid #000;
+        position:absolute;
+        top:5px;
+        right: 5px;
+        width: 150px;
+        height: 80px;
+        border-radius: 6px;
+        padding: 10px;
+
+      }
+      #my_canvas{
+        border: 1px solid #000;
+        background-color: #eee;
+      }
+    </style>
+
+    
+  </head>
+
+  <body>
+    <h1>Main HEADING - CHANGE THIS!</h1>
+    <div id="results"></div>
+
+    <canvas id="my_canvas">
+      Sorry, this browser doesn't support canvas. 
+    </canvas>
+   
+    <noscript>
+      This page requires JavaScript. Please enable it in your browser. 
+    </noscript>
+    
+    
+    <script>
+      // globals
+      var resultsbox;
+      var cx;
+      var cnvs;
+      var posx = 50;
+      var posy = 100;
+      var ball_dia = 20;
+      var speedx = 5;
+      var speedy = 7;
+      var bounding_rect;
+      var my_interval;
+      var mousex;
+      var mousey;
+      var mouse_pos = new Object;
+      
+      window.onload = function(){
+        // Get the results box as an object
+        resultsbox = document.getElementById("results");  
+        
+        // Start Canvas
+        // Get canvas object. 
+        cnvs = document.getElementById("my_canvas");
+        // "Hi res" canvas. Start with DOUBLE the intended size.  
+        cnvs.width = 1600;
+        cnvs.height = 1000;
+        // Create the CSS for canvas, at half the above size. 
+        cnvs.style.width = cnvs.width/2 + "px";
+        cnvs.style.height = cnvs.height/2 + "px";
+        
+        cx = cnvs.getContext("2d");
+        cx.scale(2,2);
+          
+        bounding_rect = cnvs.getBoundingClientRect();        
+        
+        // Get mouse position, put into a variable. 
+        cnvs.addEventListener("mousemove",function(evt){
+          // create an object with the mouse position. 
+          mouse_pos = {
+            mousex:evt.clientX - bounding_rect.left,
+            mousey:evt.clientY - bounding_rect.top
+          }
+          
+//         resultsbox.innerHTML = "Paddle top position" + 
+         
+        });
+        
+
+        
+        my_interval = setInterval("animate()",20);
+      }
+      
+      function animate(){
+        // Reset or "clear" a rectangular area of the canvas each. 
+        // We can use our bounding_rect, which contains the width and height of the 
+        // of the canvas. This makes it simpler to resize everything if needed. 
+        cx.clearRect(0,0,bounding_rect.width,bounding_rect.height);
+        
+        
+        // This is where our animation will happen. 
+        cx.beginPath();
+        cx.fillStyle = "#f99";
+        cx.strokeStyle = "#000";
+        cx.lineWidth = 2;
+        
+        cx.arc(posx,posy,ball_dia,0,Math.PI*2);
+        cx.closePath();
+        cx.fill();
+        cx.stroke();
+        
+        // Make a rectangle (PADDLE).
+        cx.fillStyle = "#9f9";
+        cx.fillRect(40,mouse_pos.mousey,20,70);
+        cx.lineWidth = 2;
+        cx.strokeStyle = "#000";
+        cx.strokeRect(40,mouse_pos.mousey,20,70);
+        
+          // What do we know:
+          // 1. The y position of the mouse, is the same as the top of the paddle. 
+          // 2. for x, we already how far over the paddle is from the left edge. 40px.
+          // 3. We need to add the width of the paddle to get the right edge. 40 + 20 = 60;
+          // 4. We need to detect that the ball is anywher from the top to the bottom. 
+          // 5. We can get the bottom by simply adding the height of the paddle. 70px.
+          // 6. IF the ball position (x and y) is equal (or less than) the right edge 
+          //    of the paddle, then reverse it. 
+        
+        // Determine if current position is past each wall. 
+        if((posx > (bounding_rect.width-ball_dia))||(posx < (0+ball_dia))){
+          speedx = -speedx;
+        }
+        if((posy > (bounding_rect.height-ball_dia))||(posy < (0+ball_dia))){
+          speedy = -speedy;
+        }
+          
+        // Detect the collision X.
+        // If the x position (horizontal) of the mouse is less than the x of the paddle. 
+        // Additionally, make sure it's moving backwards (negative), or it will bounce off
+        // the back of the paddle. 
+        if((posx <= 80) && (speedx < 0)){
+          // For testing. You can safely delete this. We are dumping variable values to 
+          // the "Results Box". 
+          resultsbox.innerHTML = "Cleared first IF<br>";
+          resultsbox.innerHTML += "Posy: " + posy + "<br>";
+          resultsbox.innerHTML += "Mousey: " + mouse_pos.mousey + "<br>";
+          // IF we get this far, it means the ball is now LESS than the X of the paddle. 
+          // We now need to determine if ADDITIONALLY, the ball matches the "Y" (vertical)
+          // position of the paddle. We need to check if it is NOT HIGHER than the paddle, 
+          // (posy > mouse_pos.mousey), or not LOWER than the bottom of the paddle
+          // (posy < mouse_pos.mousey+70). Remember, 70 is the height of the paddle. 
+          if((posy > mouse_pos.mousey) && (posy < mouse_pos.mousey+70)){
+            // If we get here, Good. Reverse the X of the ball, and make it bounce the other
+            // way. 
+            speedx = -speedx;
+          }
+        }
+        // Note for future revision: Would like to make this more "Dynamic", so we don't need
+        // to "hard code" the numbers of the paddle. ie: '70', '40', '80', etc. 
+          
+        // Do the animation. Increase the posx by the speed.
+        posx += speedx;
+        posy += speedy;
+      }
+      
+    </script>    
+    
+  </body>
+
+</html>
