@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<!--
+//////////////////////////////////////
+//                                  //
+//           Assignment 2           //
+//                                  //
+//         Advance JavaScript       //
+//                                  //
+//     Submitted To: Steve George   //
+//    Submitted From: Smily dawra   //
+//                                  //
+//////////////////////////////////////
+-->
+  <head>
+    <title>Assignment 2 - Advance JS</title>
+    <meta charset="utf-8" />
+		<style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+				background-image: url("maldives.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+      }
+
+			h1{
+				text-align: center;
+				margin-top: 5%;
+			}
+
+			#message{
+				color: #f00;
+				font-size: 0.9em;
+			}
+
+			/* Styles for Form */
+			#register{
+				background-color: #efe;
+				width: 600px;
+				border: 1px solid #400;
+				margin: 0 auto;
+				padding: 15px;
+			}
+
+			#register legend{
+				background-color: #63778b;
+				color: #fff;
+				padding: 5px;
+			}
+
+			#register label{
+				width: 140px;
+				display: block;
+				float: left;
+				clear: both;
+				font-size: 1.1em;
+			}
+
+			#register input[type="text"]{
+				border: 1px solid #004;
+				width: 300px;
+				height: 25px;
+				background-color: #eee;
+				font-family: Arial, sans-serif;
+				font-size: 1em;
+				font-weight: bold;
+				word-spacing: normal;
+				letter-spacing: normal;
+			}
+
+			#register input[type="submit"]{
+				width: 100px;
+				height: 40px;
+				cursor: pointer;
+				margin: 0 200px;
+			}
+
+			#register strong{
+				font-weight: 900;
+				color:#f00;
+			}
+
+			#register input[type="text"]:hover,
+			#register input[type="password"]:hover,
+			#register input[type="email"]:hover,
+			#register input[type="number"]:hover,
+			#register input[type="tel"]:hover{
+				background-color: #c8def3;
+			}
+
+			#register input + label{
+				float: none;
+				display: inline;
+				width: auto;
+			}
+
+			#register input{
+				width: auto;
+			}
+
+			#register input[type="submit"],
+			#register input[type="reset"]{
+				border: 2px solid #000;
+				padding: 6px;
+				background-color: #fff;
+				font-weight: 700;
+			}
+
+			#register input[type="submit"]:hover,
+			#register input[type="reset"]:hover{
+				background-color: #c99;
+			}
+
+			#register select{
+				background-color: #ccc;
+			}
+
+			#submit{
+				margin-left: 250px;
+
+			}
+    </style>
+
+  </head>
+  <body>
+		<div class="container">
+			<h1>Form Validation with Regex</h1>
+		</div>
+		<div id="message"></div>
+
+		<form id="register" action="https://uwpace.ca/post.php" method="post" novalidate>
+
+			<p><label for="first">First Name:</label>
+					<input type="text" name="first" /></p>
+
+			<p><label for="last">Last Name:</label>
+					<input type="text" name="last" /></p>
+
+			<p><label for="email">Email Address:</label>
+					<input type="text" name="email" /></p>
+
+			<p><label for="phone">Phone Number:</label>
+					<input type="text" name="phone" /></p>
+
+			<p><label for="postal">Postal Code:</label>
+					<input type="text" name="postal" /></p>
+
+			<p><label for="url">URL:</label>
+					<input type="text" name="url" /></p>
+
+			<p><label for="age">Age:</label>
+					<input type="text" name="age" /></p>
+
+			<p><input type="submit" value="Submit" /></p>
+		</form>
+
+		<script src="validator.js"></script>
+		<script>
+			//JavaScript goes here
+
+			window.onload = function(){
+
+				var form = document.getElementById("register");
+
+				form.addEventListener('submit', function(e){
+					e.preventDefault(); // prevent from submitting
+
+					var v = new Validator();
+
+					// grab all form field values
+					var email = form.email.value;
+					var first = form.first.value;
+					var last = form.last.value;
+					var phone = form.phone.value;
+					var postal = form.postal.value;
+					var url = form.url.value;
+					var age = form.age.value;
+
+
+
+					// validate all form field value
+
+					v.validateEmail(email);
+					v.validateString(first);
+					v.validateString(last);
+					v.validatePhone(phone);
+					v.validatePostal(postal);
+					v.validateUrl(url);
+					v.validateAge(age);
+
+
+
+					if(v.errors.length === 0){
+						form.submit();
+					}
+
+					//console.log(v.errors);
+
+					var x = v.errors;
+
+					document.getElementById('message').innerHTML = x;
+
+				});
+
+			}
+
+		</script>
+  </body>
+</html>
