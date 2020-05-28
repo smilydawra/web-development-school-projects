@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JavaScript Animation</title>
+    <meta charset="utf-8" />
+    <style>
+      body{
+        font-family: Tahoma, Arial, sans-serif;
+        font-size: 16px;
+      }
+      #ball{
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        border: 1px solid #000;
+        background-color: #dde;
+        height: 50px;
+        width: 50px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: radial-gradient(#dde, #114);
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.75);
+      }
+      #paddle{
+        position: absolute;
+        bottom: 10px;
+        left: 25px;
+        border: 1px solid #000;
+        background-color: #cff;
+        width: 20px;
+        height: 60px;
+        box-sizing: border-box;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.75);
+        cursor: none;
+      }
+      #info{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 50px;
+        background: #eee;
+      }
+      #scorebox{
+        position:absolute;
+        top: 0;
+        right: 200px;
+        width: 200px;
+        font-family: courier, monospace;
+        font-weight: 900;
+        font-size: 48px;
+        border: 1px solid #000;
+      }
+      #game_over{
+        position: absolute;
+        font-size: 72px;
+        font-weight: bold;
+        top: 30%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: none;
+      }
+    </style>
+    
+
+    
+  </head>
+
+  <body id="game">
+    <h1>JavaScript PONG Game</h1>
+    <div id="scorebox">0</div>
+    <div id="info"></div>
+    <p>
+      <button id="start_game">Start Animation</button>
+    </p>
+    <div id="paddle"></div>
+    <div id="ball"></div>
+    <div id="game_over">GAME OVER - YOU LOSE!</div>
+
+
+    <noscript>
+      This page requires JavaScript. Please enable it in your browser. 
+    </noscript>
+    <script src="hittest.js"></script>
+    
+    <script>
+     // Global Vars
+     var ball;
+     var xspeed = 10;
+     var yspeed = 10
+     var ball_xpos = 0;
+     var ball_ypos = 0;
+     var right_wall;
+     var bottom_wall;
+     var my_timer;
+     var ball_width;
+     var ball_styles;
+     var the_paddle;
+     var my_event;
+     var mouse_y;
+     var score = 0;
+     var scorebox;
+     var gameover = false;
+      
+     window.onresize = function(){
+       // Get the width of the viewport
+       right_wall = window.innerWidth - (ball_width + 10);
+       // Do the same fo the height. 
+       bottom_wall = window.innerHeight - (ball_width + 10); 
+       console.log(right_wall);
+     }
+     
+     // Detect that the mouse has moved. 
+     document.onmousemove = movePaddle;
+      
+     // function to move the paddle. 
+     function movePaddle(event){
+       my_event = window.event;
+       mouse_y = my_event.clientY;
+       
+       if(mouse_y < bottom_wall){
+         the_paddle.style.top = mouse_y + "px";
+       }
+     }
+      
+      
+     // When the page is done loading. 
+     onload = function(){
+       scorebox = document.getElementById("scorebox");
+       // The the "ball" ID, put into an object. 
+       ball = document.getElementById("ball");
+       // Get the "paddle" by its ID, and put into a object/variable.
+       the_paddle = document.getElementById("paddle");
+       // Get the computed styles of the ball, so we can access
+       // the CSS. 
+       ball_styles = window.getComputedStyle(ball);
+       // Get the width of the ball. 
+       ball_width = ball_styles.getPropertyValue('width');
+       // We can't subtract a string from a number, so we need to
+       // convert "50px" to 50 with parseInt()
+       ball_width = parseInt(ball_width);
+       // Get the width of the viewport
+       right_wall = window.innerWidth - (ball_width + 10);
+       // Do the same fo the height. 
+       bottom_wall = window.innerHeight - (ball_width + 10);
+       
+       document.getElementById("start_game").onclick = function(){
+         // Clear any running setTimeouts before running function. 
+         clearTimeout(my_timer);
+         moveBall();
+       }
+       
+     }
+     
+     function moveBall(){
+       ball_xpos += xspeed;
+       ball_ypos += yspeed;
+       //console.log(ball_pos);
+       //Is the ball position equal or greater than the right wall?
+       if((ball_xpos >= right_wall)||(ball_xpos <= 0)){
+         // is the ball moving left? it's negative if is. 
+         if(xspeed < 0){
+           score -= 10;
+         }
+         xspeed = -xspeed;
+       }
+       // Do the same for the bottom "wall". 
+       if((ball_ypos >= bottom_wall)||(ball_ypos <= 0)){
+         yspeed = -yspeed;   
+       }
+       
+       // Check to see if the ball has "hit" the paddle.
+       // first check to see we are moving right (xspeed is positive)
+       if(xspeed < 0){
+         if(hitTest(ball,the_paddle)){
+           xspeed = -xspeed;
+           
+           score += 10;
+           xspeed += 1;
+
+         }
+       }
+       
+       scorebox.innerHTML = score;
+       
+       // move the ball. (set to the current xpos and ypos)
+       ball.style.left=ball_xpos + "px";
+       ball.style.top=ball_ypos + "px";
+       
+       // Is the game over?
+       if(score < 0){
+         gameover = true;
+       }
+       
+       
+       if(!gameover){
+         // Recurse the funtion every 17ms. Roughly 60times per second. 
+         my_timer = setTimeout('moveBall()',17);
+       }
+       else{
+         document.querySelector("#game_over").style.display = "block";
+       }
+     }
+      
+      
+    </script>
+  </body>
+
+
+
+
+</html>
