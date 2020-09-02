@@ -10,7 +10,8 @@
   color: white;
 }
 
-.Wrapper{
-	width: 960px;
-	margin: 0 auto;
+body{
+	background-color: #e9eaed;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
 }

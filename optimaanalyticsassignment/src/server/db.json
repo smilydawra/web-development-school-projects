@@ -2,18 +2,46 @@
   "posts": [
     {
       "id": 1,
-      "post_title": "My First Ever Post",
-      "author_name": "Gagan",
+      "post_title": "BRIGHTEN YOUR HOUSE WITH SOHOCONCEPT’S MIRRORS",
+      "author_name": "Smily",
 	  "author_email": "smily@abc.com",
-	  "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	  "body": "I think we can all agree on the fact that we’ve spent a lot more time in our house this summer. You can increase the brightness of your house to get more of that summer time brightness by using one of Sohoconcept’s mirrors​."
     },
 	{
       "id": 2,
-      "post_title": "Holiday in Vegas",
+      "post_title": "SPICE UP PATIOS WITH MODERN ET AL’S METAL CHAIRS",
       "author_name": "Nik",
 	  "author_email": "nik@abc.com",
-	  "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
+	  "body": "With the exciting news that many restaurants are allowed to open their patios, it’s important to find the right chairs. We are happy to introduce you to our Et Al’s collection which has three types of bases – metal, plastic and wooden. There are a couple of factors to keep in mind when purchasing chairs for outdoors. Some factors include durability, style, and maintenance."
+  },
+  {
+	"id": 3,
+	"post_title": "THE SOLUTION TO DISINFECTING FABRICS!",
+	"author_name": "Emily",
+	"author_email": "emily@abc.com",
+	"body": "With new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates."
+},
+  {
+	"id": 4,
+	"post_title": "DESIGN YOUR IDEAL MODERN HOME OFFICE",
+	"author_name": "Grace",
+	"author_email": "grace@abc.com",
+	"body": "The rapid spread of Covid-19 has encouraged many employers to mandate their employees to work from home. Working remotely has its challenges such as being confined to your bed or battling over a designated couch. This can be the perfect opportunity to model the ideal home office you have always dreamt of!"
+  },
+    {
+  	"id": 5,
+  	"post_title": "CREATING THE PERFECT DINING SPACE IN A CONDO",
+  	"author_name": "John",
+  	"author_email": "John@abc.com",
+  	"body": "Most condos and apartments don't come with a lot of extra space. In most cities, condos won't have a dedicated dining room. But this doesn't mean you have to eat dinner on your couch every night! Creating a dining space in a condo is a combination of finding the right furniture, using the space as well as possible, and using decor to your advantage. Because of the surge in condo living the last decade, furniture designers have created some beautiful dining room furniture perfect for these smaller spaces. If you find the right table, counter space, dining chairs, and bar stools, along with the right decor, you can create a perfect dining space in your condo!"
+	},
+      {
+    	"id": 6,
+    	"post_title": "MODERN SEATING FOR THE NEW DECADE",
+    	"author_name": "Aman",
+    	"author_email": "aman@abc.com",
+    	"body": "The right piece of furniture can completely transform a room. Whether it's a piece of art, a light fixture, a custom chair, or a brightly-colored table, once you find a piece that speaks to you, you can design the rest of the space around it."
+  	}
   ],
   "replies": []
 }

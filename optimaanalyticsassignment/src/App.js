@@ -4,7 +4,7 @@ import './App.css';
 
 
 function App() {
-  return <div className="Wrapper"><PostList/></div>
+  return <PostList/>
 }
 
 export default App;
