@@ -1,0 +1,42 @@
+git add .
+
+git commit -m "this is comment"
+
+git push
+
+git status
+
+
+//to create a new branch
+git checkout -b book_detail
+
+//to switch to another branch
+git checkout master
+
+
+//to see all the branches
+git branch
+
+//to delete the branch from local
+git branch -d branchname
+
+// delete the branch from bitbucket
+git push -u origin :branchname
+
+
+
+
+add
+commit
+merge to master
+pushing to master
+git oust -u origin book_detail
+
+git pull
+
+//put you back at the last commit.. 
+/get rid of all the changes you made at last time
+git stash
+
+//php localhost
+php -S localhost:8000
