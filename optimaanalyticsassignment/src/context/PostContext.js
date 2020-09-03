@@ -36,9 +36,16 @@ const PostContextProvider = (props) => {
       type: 'DELETE_POST',
       payload: id,
     });
+};
+
+  const addReply = (reply) => {
+	  dispatch({
+		  type: 'ADD_REPLY',
+		  payload: reply,
+	  });
   };
 
-  const value = { state, addNewPost, deletePost };
+  const value = { state, addNewPost, deletePost, addReply };
 
   return <PostContext.Provider value={value}>{props.children}</PostContext.Provider>;
 };
