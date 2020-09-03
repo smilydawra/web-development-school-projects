@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
 	return <div className="mt-4">
-		<img src="/images/banner.jpeg" className="img-fluid" />
+		<img src="/images/banner.jpeg" className="img-fluid" alt="furniture_image" />
 	</div>
 }
 
