@@ -46,15 +46,17 @@ const PostList = () => {
 						{activeReply === post.id && <ReplyPost postId={post.id}
 					replySuccess={onReplySuccess} />}            <div className='reply-container'>
 				                  <small>
-				                    <strong>Post Replies: </strong>
+
 				                    {!replyByPost(post.id).length
-				                      ? 'No Replies yet'
+				                      ? ''
 				                      : replyByPost(post.id).map((rep) => (
 				                          <div className='reply' key={post.id}>
+										  <strong>Reply By: &nbsp;</strong>
+										  <span class="mb-0">
+											  &#128100; {rep.name}, 	&#128231; {rep.email}
+										  </span><br/>
 				                            <div>{rep.reply}</div>
-				                            <span>
-				                              Reply by: {rep.name}, {rep.email}
-				                            </span>
+											<hr/>
 				                          </div>
 				                        ))}
 				                  </small>
