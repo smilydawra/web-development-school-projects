@@ -28,7 +28,7 @@ const PostList = () => {
 					<tr>
 						<td><h3>{post.id}</h3></td>
 						<td><h3 className="mb-0">{post.post_title}</h3><br/><small className="text-info"><strong>Posted by: {post.author_name}, {post.author_email}</strong></small><br/> {post.body}</td>
-						<td><button type="button" className="btn btn-warning">Reply</button></td>
+						<td><NavLink to="/reply" type="button" className="btn btn-warning">Reply</NavLink></td>
 						<td><button type="button" className="btn btn-danger">	&#128465;</button></td>
 					</tr>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { NavLink } from 'react-router-dom';
 
 const CreatePost = () => {
 	const { register, handleSubmit, errors } = useForm();
@@ -9,6 +10,7 @@ const CreatePost = () => {
 	return(
 		<>
 		<h1 className="text-warning bg-white text-center">Add New Post</h1>
+		<NavLink to="/" type="button" className="btn btn-success mb-2 align-right">Back to Posts</NavLink>
 		<form onSubmit={handleSubmit(submitPost)}>
 			<div className="form-group">
 				<label htmlFor="name">Author Name: </label>
