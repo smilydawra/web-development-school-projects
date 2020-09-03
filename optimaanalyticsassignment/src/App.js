@@ -1,5 +1,5 @@
 import React from 'react';
-import PostList from './components/PostList/PostList';
+import PostList from './components/PostList';
 import CreatePost from './components/CreatePost';
 import Header from './components/Header';
 import Footer from './components/Footer';

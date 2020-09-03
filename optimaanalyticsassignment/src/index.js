@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { PostContextProvider } from './context/PostContext'; 
 
 ReactDOM.render(
   <React.StrictMode>
+  	<PostContextProvider>
     <App />
+	</PostContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

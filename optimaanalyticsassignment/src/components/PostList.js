@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import postData from '../../server/db.json';
+import React, { useState, useEffect, useContext } from 'react';
+import { PostContext } from '../context/PostContext';
 import { NavLink } from 'react-router-dom';
-import './PostList.css';
 
 const PostList = () => {
-	const [posts, setPosts] = useState([])
+	const [posts, setPosts] = useState([]);
+
+	const { state, deletePost } = useContext(PostContext);
 
 	useEffect(() => {
-		setPosts(postData.posts);
-	}, []);
+		setPosts(state.posts);
+	}, [state.posts]);
 
 	return (
 		<>
@@ -29,7 +30,7 @@ const PostList = () => {
 						<td><h3>{post.id}</h3></td>
 						<td><h3 className="mb-0">{post.post_title}</h3><br/><small className="text-info"><strong>Posted by: {post.author_name}, {post.author_email}</strong></small><br/> {post.body}</td>
 						<td><NavLink to="/reply" type="button" className="btn btn-warning">Reply</NavLink></td>
-						<td><button type="button" className="btn btn-danger">	&#128465;</button></td>
+						<td><button onClick={() => deletePost(post.id)} type="button" className="btn btn-danger">	&#128465;</button></td>
 					</tr>
 
 				))
