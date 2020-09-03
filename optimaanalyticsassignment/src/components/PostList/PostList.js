@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import postData from '../../server/db.json';
+import { NavLink } from 'react-router-dom';
 import './PostList.css';
 
 const PostList = () => {
@@ -11,14 +12,8 @@ const PostList = () => {
 
 	return (
 		<>
-		<main>
-		<div className="container">
-		<div className="mt-4">
-			<img src="/images/banner.jpeg" className="img-fluid" />
-		</div>
-		<div>
 		<h1 className="text-warning bg-white text-center">Recent Posts</h1>
-		<button type="button" className="btn btn-primary mb-2 align-right">Add New Post</button>
+		<NavLink to="/create" type="button" className="btn btn-primary mb-2 align-right">Add New Post</NavLink>
 		<table className="table table-light table-bordered">
 			<thead className="thead-dark">
 				<tr>
@@ -41,9 +36,6 @@ const PostList = () => {
 			}
 			</tbody>
 		</table>
-		</div>
-		</div>
-		</main>
 	</>
 	)
 }
