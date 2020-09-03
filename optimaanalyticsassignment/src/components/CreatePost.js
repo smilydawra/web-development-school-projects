@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 const CreatePost = () => {
-	const [posts, setPosts] = useState([])
-
+	const { register, handleSubmit, errors } = useForm();
+	const submitPost = (data) => {
+		console.log(data);
+	}
 	return(
 		<>
 		<h1 className="text-warning bg-white text-center">Add New Post</h1>
-		<form>
+		<form onSubmit={handleSubmit(submitPost)}>
 			<div className="form-group">
-				<label for="name">Author Name: </label>
-				<input type="text" className="form-control" id="name" name="name" placeholder="name@example.com"/>
+				<label htmlFor="name">Author Name: </label>
+				<input ref={register({ required: true })} type="text" className="form-control" id="name" name="name" placeholder="Full Name"/>
+				<small className="form-text text-danger">{errors.name && 'Author name is required'}</small>
 			</div>
 			<div className="form-group">
-				<label for="email">Author email: </label>
-				<input type="email" className="form-control" id="email" name="email" placeholder="name@example.com"/>
+				<label htmlFor="email">Author email: </label>
+				<input ref={register({ required: true, email: true })} type="email" className="form-control" id="email" name="email" placeholder="abc@example.com"/>
+				<small className="form-text text-danger">{errors.email && 'Author Email is required'}</small>
 			</div>
 			<div className="form-group">
-				<label for="body">Example Post</label>
-				<textarea className="form-control" id="body" name="body" rows="3"></textarea>
+				<label htmlFor="body">Post Detail</label>
+				<textarea ref={register({ required: true })} className="form-control" id="body" name="body" rows="3"></textarea>
+				<small className="form-text text-danger">{errors.body && 'Post Detail is required'}</small>
 			</div>
-			<button type="submit" class="btn btn-primary mb-2">Create Post</button>
+			<button type="submit" className="btn btn-primary mb-2">Create Post</button>
 		</form>
 	</>
 	)
