@@ -3,6 +3,10 @@ import { PostContext } from "../context/PostContext";
 import PostContent from "./PostContent";
 import { NavLink } from "react-router-dom";
 
+/**
+ * function SearchResult used to search through the posts
+ * accepts props as an argument
+ */
 const SearchResult = (props) => {
   const [searchResults, setSearchResults] = useState([]);
   const { state } = useContext(PostContext);

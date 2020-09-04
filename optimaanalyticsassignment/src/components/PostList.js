@@ -4,6 +4,9 @@ import ReplyPost from "./ReplyPost";
 import PostContent from "./PostContent";
 import { NavLink } from "react-router-dom";
 
+/**
+ * function PostList will display list of posts, reply of post
+ */
 const PostList = () => {
   const [posts, setPosts] = useState([]);
 

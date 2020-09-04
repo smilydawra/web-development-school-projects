@@ -2,6 +2,10 @@ import React, { useContext } from "react";
 import { PostContext } from "../context/PostContext";
 import { useForm } from "react-hook-form";
 
+/**
+ * function ReplyPost performing functionality of replying to a post
+ * accepts props as an argument
+ */
 const ReplyPost = (props) => {
   const { register, handleSubmit, errors } = useForm();
 

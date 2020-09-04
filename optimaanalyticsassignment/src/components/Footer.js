@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * function Footer used to display footer
+ */
 const Footer = () => {
   return (
     <footer className="page-footer font-small blue">

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
+/**
+ * function Header contains logo and searchbar
+ */
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const history = useHistory();

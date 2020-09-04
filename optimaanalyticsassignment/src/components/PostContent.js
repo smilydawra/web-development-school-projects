@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * function PostContent used to display post skeleton
+ * accepts post as an argument
+ */
 const PostContent = ({ post }) => {
   return (
     <>
