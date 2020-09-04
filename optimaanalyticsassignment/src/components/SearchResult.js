@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { PostContext } from '../context/PostContext';
-import PostContent from './PostContent';
-import { NavLink } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
+import { PostContext } from "../context/PostContext";
+import PostContent from "./PostContent";
+import { NavLink } from "react-router-dom";
 
 const SearchResult = (props) => {
   const [searchResults, setSearchResults] = useState([]);
@@ -24,9 +24,15 @@ const SearchResult = (props) => {
   };
 
   return (
-    <div className='mt-4'>
+    <div className="mt-4">
       <h1>Search Results</h1>
-	  <NavLink to="/" type="button" className="btn btn-success mb-2 align-right">Back to Posts</NavLink>
+      <NavLink
+        to="/"
+        type="button"
+        className="btn btn-success mb-2 align-right"
+      >
+        Back to Posts
+      </NavLink>
       <hr />
       {!searchResults.length ? (
         <p>No Results found</p>
