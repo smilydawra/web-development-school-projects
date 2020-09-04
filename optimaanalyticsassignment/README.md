@@ -23,4 +23,4 @@ Your app is ready to be deployed!
 
 ### Live Version
 
-Visit [http://furnitureconcepts.smilydawra.info/](This link) to see the live version.
+Visit [This link](http://furnitureconcepts.smilydawra.info/) to see the live version.
