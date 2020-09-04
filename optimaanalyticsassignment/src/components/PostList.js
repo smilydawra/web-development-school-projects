@@ -50,7 +50,7 @@ const PostList = () => {
 				                    {!replyByPost(post.id).length
 				                      ? ''
 				                      : replyByPost(post.id).map((rep) => (
-				                          <div className='reply' key={post.id}>
+				                          <div className='reply' key={rep.id}>
 										  <strong>Reply By: &nbsp;</strong>
 										  <span class="mb-0">
 											  &#128100; {rep.name}, 	&#128231; {rep.email}

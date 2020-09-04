@@ -30,7 +30,7 @@ const CreatePost = (props) => {
 			<div className="form-group">
 				<label htmlFor="post_title">Post Title: </label>
 				<input ref={register({ required: true })} type="text" className="form-control" id="post_title" name="post_title" />
-				<small className="form-text text-danger">{errors.name && 'Author name is required'}</small>
+				<small className="form-text text-danger">{errors.post_title && 'Author name is required'}</small>
 			</div>
 			<div className="form-group">
 				<label htmlFor="body">Post Detail</label>
