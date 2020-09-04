@@ -68,7 +68,7 @@ const ReplyPost = (props) => {
             rows="3"
           ></textarea>
           <small className="form-text text-danger">
-            {errors.name && "Reply Message is required"}
+            {errors.reply && "Reply Message is required"}
           </small>
         </div>
         <button type="submit" className="btn btn-primary mb-2">

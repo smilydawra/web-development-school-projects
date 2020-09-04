@@ -41,7 +41,7 @@ const CreatePost = (props) => {
             placeholder="Full Name"
           />
           <small className="form-text text-danger">
-            {errors.name && "Author name is required"}
+            {errors.author_name && "Author name is required"}
           </small>
         </div>
         <div className="form-group">
@@ -55,7 +55,7 @@ const CreatePost = (props) => {
             placeholder="abc@example.com"
           />
           <small className="form-text text-danger">
-            {errors.email && "Author Email is required"}
+            {errors.author_email && "Author Email is required"}
           </small>
         </div>
         <div className="form-group">
@@ -68,7 +68,7 @@ const CreatePost = (props) => {
             name="post_title"
           />
           <small className="form-text text-danger">
-            {errors.post_title && "Author name is required"}
+            {errors.post_title && "Post Title is required"}
           </small>
         </div>
         <div className="form-group">
