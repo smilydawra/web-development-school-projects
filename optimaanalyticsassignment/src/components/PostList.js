@@ -48,10 +48,10 @@ const PostList = () => {
           </tr>
         </thead>
         <tbody>
-          {posts.map((post) => (
+          {posts.map((post, index) => (
             <tr key={post.id}>
               <td>
-                <h3>{post.id}</h3>
+                <h3>{index+1}</h3>
               </td>
               <td>
                 <PostContent post={post} />
